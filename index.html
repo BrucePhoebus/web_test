@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href="css/index.css">
+		<script src="js/vue.js"></script>
+	</head>
+
+	<body id="body">
+		<!--简单变量输出-->
+		<!--<div id="app">
+	    		{{ message }}
+			</div>-->
+
+		<!--v-if判断-->
+		<!--<div id="app">
+				<span v-if="seen">{{ message }}</span>
+			</div>-->
+
+		<!--for loops-->
+		<!--<div id="app">
+				<ol>
+					<li v-for="todo in todos">
+						{{ todo.text }}
+					</li>
+				</ol>
+			</div>-->
+		<!--<ul id="app">
+				<li v-for="item in items" class="item-{{$index}}">
+					{{$index}}-{{parentMessage}} {{item.msg}}
+				</li>
+			</ul>-->
+
+		<!--
+            	作者：offline
+            	时间：2018-08-17
+            	描述：v-on: 反转字符串，调用函数
+            -->
+		<!--<div id="app">
+            	<p>{{ message }}</p>
+            	<button v-on:click="reverseMessage">点击反转</button>
+            </div>-->
+
+		<!--
+            	作者：offline
+            	时间：2018-08-17
+            	描述：v-show：隐藏HTML元素，类似v-if：变量：false
+            -->
+		<!--<div id="app">
+            	<p v-show="greeting">This is v-show.</p>
+            </div>-->
+
+		<!--
+            	作者：offline
+            	时间：2018-08-17
+            	描述：v-else：if-else判断
+            -->
+		<!--<div id="app">
+            	<p v-if="ok">It's right.</p>
+            	<p v-else="ok">It's false.</p>
+            </div>-->
+
+		<!--
+            	作者：offline
+            	时间：2018-08-17
+            	描述：v-model：创建双向数据绑定
+            -->
+		<!--<div id="app">
+            	<p>{{ message }}</p>
+            	<input v-model="message" />
+            </div>-->
+		<!--<form>
+            		姓名：
+            			<input type="text" v-model="data.name" placeholder="" /><br />
+            		性别：
+	            		<input type="radio" id="man" value="One" v-model="data.sex" />
+	            		<label for="man">男</label>
+	            		<input type="radio" id="male" value="Two" v-model="data.sex" />
+	            		<label for="male">女</label><br/>
+            		兴趣：
+            			<input type="checkbox" id="book" value="book" v-model="data.interest" />
+            			<label for="book">阅读</label>
+            			<input type="checkbox" id="swim" value="swim" v-model="data.interest" />
+            			<label for="swim">游泳</label>
+            			<input type="checkbox" id="game" value="game" v-model="data.interest" />
+            			<label for="game">游戏</label>
+            			<input type="checkbox" id="song" value="song" v-model="data.interest" />
+            			<label for="song">唱歌</label><br />
+            		身份：
+            			<select v-model="data.identity">
+            				<option value="teacher">教室</option>
+            				<option value="doctor">医生</option>
+            				<option value="lawer">律师</option>
+            			</select>
+            	</form>-->
+
+		<!--
+                	作者：offline
+                	时间：2018-08-17
+                	描述：原始HTML
+           -->
+		<!--<div id="app">
+			<p>Using mustaches: {{ rawHtml }}</p>
+			<p>Using v-html directive:
+				<span v-html="rawHtml"></span></p>
+		</div>-->
+
+		<!--
+            	作者：offline
+            	时间：2018-08-17
+            	描述：自定义组件：component
+            -->
+		<!--<div id="app">
+			<ol>
+				<todo-item></todo-item>
+			</ol>
+		</div>-->
+
+		<!--
+        	作者：offline
+        	时间：2018-08-17
+        	描述：1-10循环输出，单数输出
+        -->
+		<!--<div id="app">
+			<li v-for="(item, index) in items" class="red:index==1">
+				{{index}} {{parentMessage}}-{{item.msg}}
+			</li>
+			<li v-for="(item, index) in 10">
+				{{index+1}}
+			</li>
+			<li v-for="(item, index) in 10">
+				<span v-if="index%2==1">{{index+1}}</span>
+			</li>
+		</div>-->
+
+		<!--<div id="app">
+			<p v-if="ok">小样，你还想控制我的自由？没门，我就不听话~</p>
+			<p>请选择：
+				<label><input type="radio" name="show" value="false" v-on:click='inpclick()' v-model="val"/>隐藏　</label>
+				<label><input type="radio" name="show" value="true" v-on:click='inpclick()' v-model="val" />显示</label></p>
+			<p>val：{{val}}；ok：{{ok}}</p>
+		</div>-->
+		
+
+		<div id="app"></div>
+		<div id="app"></div>
+
+		<script src="js/index.js"></script>
+	</body>
+
+</html>
