@@ -3,7 +3,7 @@ Vue.component('todo-item', {
 });
 // template: '<App/>',
 //components: { App }
-var all = new Vue({
+app = new Vue({
 	el: '#app',
 	data: {
 		rawHtml: "<span style=\"color:red\">This should be red.",
@@ -23,10 +23,33 @@ var all = new Vue({
 			{ msg: '滴滴专车'}
 		],
 		
+		primitiveValues: {
+			firstNmae: 'Phoebus',
+			lassName: 'Zheng',
+			age: 23
+		},
+		
+		objectValues: {
+			one: {
+				message: 'Hello'
+			},
+			two: {
+				message: 'Phoebus Zheng'
+			}
+		},
+		
+		person: {
+            name: '大漠',
+            set: '男',
+            age: 30
+       },
+       cat: "<img src='//www.w3cplus.com/sites/default/files/blogs/2017/1709/cat.jpg' />",
+		
+		num: 10,
 		greeting: false,
 		ok: true,
-		val:true,
-		name: "",
+		val:false,
+		name: "大漠",
 		sex: "",
 		interest: [],
 		identity:''
@@ -35,8 +58,13 @@ var all = new Vue({
 		reverseMessage: function() {
 			this.message =  this.message.split('').reverse().join('');
 		},
-//		inpclick: function() {
-//　　　　		this.ok = this.val;
-//　　　}
+		/*inpclick: function() {
+			console.log(typeof this.val);
+　　　　if(this.val=="false"){
+			　	this.ok=false;
+			}else{
+			　	this.ok=true;
+			}
+　　　}*/
 	}
 });

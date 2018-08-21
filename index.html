@@ -2,11 +2,13 @@
 <html>
 
 	<head>
+		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/index.css">
 		<script src="js/vue.js"></script>
 	</head>
 
 	<body id="body">
+
 		<!--简单变量输出-->
 		<!--<div id="app">
 	    		{{ message }}
@@ -123,15 +125,57 @@
         -->
 		<!--<div id="app">
 			<li v-for="(item, index) in items" class="red:index==1">
-				{{index}} {{parentMessage}}-{{item.msg}}
+				{{index}} {{parentMessage}}-{{item.msg}}&nbsp;
 			</li>
 			<li v-for="(item, index) in 10">
-				{{index+1}}
+				{{index+1}}&nbsp;
 			</li>
 			<li v-for="(item, index) in 10">
-				<span v-if="index%2==1">{{index+1}}</span>
+				<span v-if="index%2==1">{{index+1}}</span>&nbsp;
+			</li>
+			<p v-for="(num, index) in 10" v-if='index<5'>
+				{{num}}&nbsp;
+			</p>
+
+			<!--第三个参数为索引:
+			<li v-for="(item,key,index) of items">
+				{{index}} . {{key}} : {{item}}&nbsp;
+			</li>
 			</li>
 		</div>-->
+		<!--<div id="app">
+			<span v-for="n in 5">第{{ n }}<br/></span>
+			<p style="display:inline;" v-for="(item, index) in num">
+				<span v-if="index%2==1">
+					{{index+1}}
+					<span v-if="index+2<num">、</span>
+				</span>
+			</p>
+		</div>-->
+		
+		<div id="app">
+			<ul>
+				<li v-for="value in primitiveValues"{{ $key }} : {{ value }}>			
+				</li><hr/>
+				<li v-for="(key, item) in objectValues">{{ key }} : {{ item.message }}</li>
+			</ul>
+		</div>
+
+		<!--
+        	作者：offline
+        	时间：2018-08-17
+        	描述：双重for循环
+        -->
+		<!--<div id="app">
+        	<span v-for="i in 9">
+        		<span v-for="j in 9">
+        			<span v-if="i>=j">
+        				{{i}}*{{j}}={{i*j}}
+        			</span>
+        		</span>
+        		<br />
+        	</span>
+        </div>-->
 
 		<!--<div id="app">
 			<p v-if="ok">小样，你还想控制我的自由？没门，我就不听话~</p>
@@ -140,10 +184,69 @@
 				<label><input type="radio" name="show" value="true" v-on:click='inpclick()' v-model="val" />显示</label></p>
 			<p>val：{{val}}；ok：{{ok}}</p>
 		</div>-->
-		
 
-		<div id="app"></div>
-		<div id="app"></div>
+		<!--
+        	作者：1634372267@qq.com
+        	时间：2018-08-20
+        	描述：v-text：更新元素的textContent
+        -->
+		<!--<div id="app">
+        	<span v-text="message"></span><br />
+        	<span>{{ message }}</span>
+        </div>-->
+
+		<!--
+        	作者：1634372267@qq.com
+        	时间：2018-08-20
+        	描述：通过控制台动态更新:Mustache语法
+        -->
+		<!--<div id="app">
+        	<h1>Name: {{ name }}（未绑定v-once会改变name）</h1>
+        	<h1 v-once>Name: {{ name }} (绑定v-once不会改变name)</h1>
+        </div>-->
+
+		<!--
+        	作者：1634372267@qq.com
+        	时间：2018-08-20
+        	描述：if-else-if
+        -->
+		<!--<div id="app">
+        	<p v-if="message==='10086'">message===10086</p>
+			<p v-else-if="message==='10087'">message===10087</p>
+			<p v-else>message===10088</p>
+        </div>-->
+
+		<!--
+        	作者：1634372267@qq.com
+        	时间：2018-08-20
+        	描述：v-text效果
+        -->
+		<!--<div id="app">
+			<h2>{{}}方法：</h2>
+			<ul>
+				<li v-for="(value, key) in person">{{ key }}: {{ value }}</li>
+			</ul>
+			<hr>
+			<h2>v-text方法：</h2>
+			<ul>
+				<li v-for="(value, key) in person" v-text="key + ':' + value"></li>
+			</ul>
+		</div>-->
+
+		<!--
+        	作者：1634372267@qq.com
+        	时间：2018-08-20
+        	描述：v-html效果
+        	控制台添加节点：
+        		var h1Element = document.createElement('h1') ;
+				h1Element.classList.add('title') 
+				h1Element.textContent = '把大漠塞进去' 
+				document.getElementById('app').appendChild(h1Element)
+        -->
+		<!--<div id="app">
+        	<h1 class=​"title">​把大漠塞进去​</h1>
+        	<img src='//www.w3cplus.com/sites/default/files/blogs/2017/1709/cat.jpg' />
+        </div>-->​
 
 		<script src="js/index.js"></script>
 	</body>
