@@ -1,4 +1,8 @@
 Vue.component('todo-item', {
+	prop:{
+		item:'',
+		items: []
+	}
 	template: '<li>This is a todo.</li>'
 });
 // template: '<App/>',
